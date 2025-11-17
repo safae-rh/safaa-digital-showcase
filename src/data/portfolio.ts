@@ -1,5 +1,7 @@
 // Get base path for assets (works with GitHub Pages)
 const basePath = import.meta.env.BASE_URL || '/';
+// Ensure basePath ends with / and remove double slashes
+const normalizedBasePath = basePath.endsWith('/') ? basePath : `${basePath}/`;
 
 export const personalInfo = {
   name: "Safaa Rhazouli",
@@ -10,7 +12,7 @@ export const personalInfo = {
   phone: "+212 6 24497290",
   linkedin: "https://www.linkedin.com/in/safaa-rhazouli",
   location: "Beni Mellal, Maroc",
-  cvPath: `${basePath}CV_Safaa_Rhazouli.pdf`,
+  cvPath: `${normalizedBasePath}CV_Safaa_Rhazouli.pdf`,
 };
 
 export const aboutText = `Je suis étudiante en 5ème année à l'École Nationale des Sciences Appliquées (ENSA) de Beni Mellal, spécialisée en Transformation Digitale Industrielle. Passionnée par la data, le développement web et les technologies émergentes comme l'IA et l'IoT, j'aime créer des solutions qui automatisent, optimisent et facilitent les opérations industrielles.
