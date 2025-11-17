@@ -1,73 +1,79 @@
-# Welcome to your Lovable project
+# Portfolio Professionnel - Safaa Rhazouli
 
-## Project info
+Portfolio moderne et professionnel d'une ingénieure en Transformation Digitale Industrielle, spécialisée en Data & Développement Web.
 
-**URL**: https://lovable.dev/projects/a4668115-161b-4c0d-864f-add4e9afe179
+## 🚀 Technologies utilisées
 
-## How can I edit this code?
+- **React 18** - Bibliothèque JavaScript pour l'interface utilisateur
+- **TypeScript** - Typage statique pour JavaScript
+- **Vite** - Build tool rapide et moderne
+- **Tailwind CSS** - Framework CSS utility-first
+- **shadcn/ui** - Composants UI modernes et accessibles
+- **React Router** - Navigation côté client
 
-There are several ways of editing your application.
+## 📋 Prérequis
 
-**Use Lovable**
+- Node.js (version 18 ou supérieure)
+- npm ou yarn
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/a4668115-161b-4c0d-864f-add4e9afe179) and start prompting.
+## 🛠️ Installation
 
-Changes made via Lovable will be committed automatically to this repo.
+```bash
+# Cloner le dépôt
+git clone https://github.com/safae-rh/safaa-digital-showcase.git
 
-**Use your preferred IDE**
+# Aller dans le dossier du projet
+cd safaa-digital-showcase
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+# Installer les dépendances
+npm install
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Lancer le serveur de développement
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+Le site sera accessible sur `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## 📦 Scripts disponibles
 
-**Use GitHub Codespaces**
+- `npm run dev` - Lance le serveur de développement
+- `npm run build` - Crée une version de production optimisée
+- `npm run preview` - Prévisualise la version de production
+- `npm run lint` - Vérifie le code avec ESLint
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## 🌐 Déploiement
 
-## What technologies are used for this project?
+Le site est automatiquement déployé sur GitHub Pages à chaque push sur la branche `main`.
 
-This project is built with:
+### Déploiement manuel
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+1. Construire le projet :
+```bash
+npm run build
+```
 
-## How can I deploy this project?
+2. Le dossier `dist` contient les fichiers à déployer.
 
-Simply open [Lovable](https://lovable.dev/projects/a4668115-161b-4c0d-864f-add4e9afe179) and click on Share -> Publish.
+## 📝 Structure du projet
 
-## Can I connect a custom domain to my Lovable project?
+```
+├── public/          # Fichiers statiques (images, PDF, etc.)
+├── src/
+│   ├── components/  # Composants React
+│   ├── data/        # Données du portfolio
+│   ├── pages/       # Pages de l'application
+│   └── assets/      # Images et ressources
+└── dist/            # Fichiers de production (généré)
+```
 
-Yes, you can!
+## 👤 Auteur
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+**Safaa Rhazouli**
+- Étudiante en 5ème année à l'ENSA Beni Mellal
+- Spécialisée en Transformation Digitale Industrielle
+- Email: safaarhazouli10@gmail.com
+- LinkedIn: [safaa-rhazouli](https://www.linkedin.com/in/safaa-rhazouli)
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📄 Licence
+
+Ce projet est sous licence personnelle. Tous droits réservés.
