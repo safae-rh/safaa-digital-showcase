@@ -86,18 +86,24 @@ export const Contact = () => {
               </div>
 
               <div className="pt-6">
-                <a href={personalInfo.cvPath} download>
-                  <Button 
-                    size="lg"
-                    className="group relative bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white shadow-xl transition-all hover:scale-105 px-8 py-6 text-lg font-semibold overflow-hidden"
-                  >
-                    <span className="relative z-10 flex items-center gap-2">
-                      <Download className="group-hover:translate-y-1 transition-transform" size={20} />
-                      Télécharger mon CV
-                    </span>
-                    <span className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  </Button>
-                </a>
+                <Button 
+                  size="lg"
+                  onClick={() => {
+                    const link = document.createElement('a');
+                    link.href = personalInfo.cvPath;
+                    link.download = 'CV_Safaa_Rhazouli.pdf';
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+                  }}
+                  className="group relative bg-gradient-to-r from-primary to-primary/80 hover:from-primary/90 hover:to-primary/70 text-white shadow-xl transition-all hover:scale-105 px-8 py-6 text-lg font-semibold overflow-hidden"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    <Download className="group-hover:translate-y-1 transition-transform" size={20} />
+                    Télécharger mon CV
+                  </span>
+                  <span className="absolute inset-0 bg-gradient-to-r from-accent to-primary opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                </Button>
               </div>
             </div>
           </CardContent>
