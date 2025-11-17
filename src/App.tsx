@@ -8,12 +8,24 @@ import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
 
+// Get base path for GitHub Pages
+const basePath = import.meta.env.BASE_URL || '/';
+
+// Handle GitHub Pages 404 redirect
+if (import.meta.env.MODE === 'production') {
+  const path = window.location.pathname;
+  if (path.includes('/?/')) {
+    const newPath = path.replace('/?/', '/');
+    window.history.replaceState({}, '', newPath);
+  }
+}
+
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={basePath}>
         <Routes>
           <Route path="/" element={<Index />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
